@@ -11,9 +11,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <db:mysql-config name="MySQL_Configuration" host="testaws1.ce1xnn9brlzu.ap-south-1.rds.amazonaws.com" port="3306" user="testaws1" password="testaws1" database="test" doc:name="MySQL Configuration"/>
     <flow name="mymuleprojectFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <db:update config-ref="MySQL_Configuration" doc:name="Database">
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
             <db:parameterized-query><![CDATA[Select * from Amount1279;]]></db:parameterized-query>
-        </db:update>
+        </db:select>
         <set-payload doc:name="Set Payload"/>
     </flow>
 </mule>
