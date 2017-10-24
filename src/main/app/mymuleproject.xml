@@ -12,8 +12,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="mymuleprojectFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
         <db:select config-ref="MySQL_Configuration" doc:name="Database">
-            <db:parameterized-query><![CDATA[Select * from Amount1279;]]></db:parameterized-query>
+            <db:parameterized-query><![CDATA[Select custid from Amount1279 where custid=#[payload];]]></db:parameterized-query>
         </db:select>
-        <set-payload doc:name="Set Payload"/>
+        <set-payload doc:name="Set Payload" value="#[payload[0].custid]"/>
     </flow>
 </mule>
