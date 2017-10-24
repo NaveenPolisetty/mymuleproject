@@ -43,7 +43,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>1.0</version>
+				<version>1.2</version>
 				<extensions>true</extensions>
 				<configuration>
                     <copyToAppsDirectory>true</copyToAppsDirectory>
@@ -84,7 +84,7 @@
 		<dependency>
     		<groupId>org.mule.tools.maven</groupId>
     		<artifactId>mule-app-maven-plugin</artifactId>
-    		<version>1.0</version>
+    		<version>1.2</version>
 		</dependency>
 		<!-- Xml configuration -->
 		<!-- Mule Dependencies -->
